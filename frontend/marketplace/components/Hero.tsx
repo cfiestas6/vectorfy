@@ -42,17 +42,15 @@ import {
                   left: 0,
                   zIndex: -1,
                 }}>
-                Welcome to
+                Access Top Tier
               </Text>
               <br />
               <Text as={'span'} color="brand.white.normal">
-                Vectorfy!
+              Machine Learning APIs
               </Text>
             </Heading>
-            <Text color={'gray.500'}>
-              Snippy is a rich coding snippets app that lets you create your own code
-              snippets, categorize them, and even sync them in the cloud so you can use them
-              anywhere. All that is free!
+            <Text color='brand.white.dark'>
+                Unlock access to powerful machine learning and artificial intelligence APIs. Save time and money by using other's hardware and AI models.
             </Text>
             <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
               <Button

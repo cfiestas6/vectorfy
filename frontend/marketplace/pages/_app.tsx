@@ -16,7 +16,7 @@ const colors = {
     },
     white: {
       normal: '#FFFFFF',
-      dark: '#F5F5F5'
+      dark: '#EFEFEF'
     },
   },
 }

@@ -26,7 +26,7 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
         p={6}
         maxW={'330px'}
         w={'full'}
-        bg={'brand.white.dark'}
+        bg='brand.white.dark'
         boxShadow={'2xl'}
         rounded={'lg'}
         pos={'relative'}
