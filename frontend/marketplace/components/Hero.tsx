@@ -16,7 +16,7 @@ import {
   } from '@chakra-ui/react'
   
   export default function CallToActionWithVideo() {
-    const IMAGE = 'cover.png'
+    const IMAGE = 'cover2.png'
     return (
       <Container minH='2xl' maxW={'7xl'} pt='2rem'>
         <Stack
@@ -115,7 +115,7 @@ import {
                     },
                   }}>
                   <Image
-                    rounded={'lg'}
+                    rounded={'xl'}
                     height={345}
                     width={423}
                     objectFit={'cover'}
