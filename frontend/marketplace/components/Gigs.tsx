@@ -19,9 +19,9 @@ export default function Gigs() {
             Marketplace:
         </Heading>
             <Flex mx='10%' mb='3rem' gap='7.5rem'>
-                <GigCard name="Geography LLM" user="elnano" price={80} imageURL='ml.png'  />
-                <GigCard name="Logo Maker" user="churumbe" price={80} imageURL='ml.png'  />
-                <GigCard name="Branding Expert" user="nacho" price={80} imageURL='ml.png'  />
+                <GigCard name="Geography LLM" user="elnano" price={80} imageURL='geography-llm.png'  />
+                <GigCard name="AI Logo Maker" user="churumbe" price={80} imageURL='logo-maker.png'  />
+                <GigCard name="Branding Expert QA" user="nacho" price={80} imageURL='branding-expert.png'  />
             </Flex>     
     </ Box>
 )

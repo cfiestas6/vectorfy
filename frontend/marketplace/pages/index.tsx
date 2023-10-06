@@ -6,6 +6,7 @@ import Hero from '../components/Hero'
 import Categories from '../components/Categories'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import BecomeProvider from '@/components/BecomeProvider'
 
 import { Box } from '@chakra-ui/react'
 import Gigs from '@/components/Gigs'
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero/>
       <Gigs/>
       <Categories />
+      <BecomeProvider />
       <Footer />
     </Box>
   )

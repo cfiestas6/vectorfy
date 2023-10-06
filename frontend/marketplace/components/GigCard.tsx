@@ -10,8 +10,6 @@ import {
   Image,
 } from '@chakra-ui/react'
 
-const IMAGE =
-  'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
 
 type Gig = {
     name: string,
@@ -28,7 +26,7 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
         p={6}
         maxW={'330px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={'brand.white.dark'}
         boxShadow={'2xl'}
         rounded={'lg'}
         pos={'relative'}
@@ -46,7 +44,7 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
+            backgroundImage: {imageURL},
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -60,7 +58,7 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
             height={230}
             width={282}
             objectFit={'cover'}
-            src={IMAGE}
+            src={imageURL}
             alt="#"
           />
         </Box>
