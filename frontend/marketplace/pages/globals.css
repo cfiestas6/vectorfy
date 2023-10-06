@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --caption-work-sans: "Work Sans";
+  --h5-space-mono: "Space Mono";
+  --components-button-large: Roboto;
+  --font-baloo-bhai: "Baloo Bhai";
+
+  /* font sizes */
+  --caption-work-sans-size: 12px;
+  --basebody-work-sans-size: 16px;
+  --h5-space-mono-size: 22px;
+  --h3-work-sans-size: 38px;
+  --font-size-5xl: 24px;
+  --h4-space-mono-size: 28px;
+  --h1-work-sans-size: 67px;
+  --components-button-large-size: 15px;
+  --font-size-sm-5: 13.5px;
+  --font-size-xs-2: 11.2px;
+  --font-size-3xl-4: 22.4px;
+  --font-size-base-5: 16.5px;
+  --font-size-xl: 20px;
+  --font-size-4xl-9: 23.9px;
+  --font-size-9xl-4: 28.4px;
+  --font-size-2xs-5: 10.5px;
+  --font-size-mid-9: 17.9px;
+  --font-size-3xs-7: 9.7px;
+  --font-size-4xs: 9px;
+  --font-size-26xl-6: 45.6px;
+  --font-size-23xl: 42px;
+
+  /* Colors */
+  --color-gray-100: #8e8e94;
+  --color-gray-200: #858584;
+  --background: #001c30;
+  --color-gray-300: rgba(0, 0, 0, 0.6);
+  --color-gray-400: rgba(0, 0, 0, 0.23);
+  --color-gray-500: rgba(255, 255, 255, 0.2);
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --color-gray-600: rgba(255, 255, 255, 0.1);
+  --call-to-action: #dafffb;
+  --caption-label-text: #efefef;
+  --color-whitesmoke-100: #eaeaea;
+  --background-secondary: #64ccc5;
+  --text: #fff;
+  --color-darkslategray-100: #424242;
+  --color-darkslategray-200: #3b3b3b;
+  --color-darkslategray-300: #303030;
+  --color-lightgray-100: #ccc;
+  --color-orange: #f99a0e;
+  --color-cornflowerblue-100: #1262af;
+  --color-cornflowerblue-200: #1262ae;
+  --color-gainsboro-100: #e0e0e0;
+  --color-gainsboro-200: rgba(226, 226, 226, 0.1);
+  --color-lavender: #ccdcec;
+  --color-darkgray: #999;
+  --color-silver: #bdbdbd;
+  --color-dimgray: #616161;
+
+  /* Gaps */
+  --gap-11xl: 30px;
+  --gap-xl: 20px;
+  --gap-6xl: 25px;
+  --gap-xs: 12px;
+  --gap-mini: 15px;
+  --gap-3xs: 10px;
+  --gap-61xl: 80px;
+  --gap-21xl: 40px;
+  --gap-29xl: 48px;
+  --gap-41xl: 60px;
+  --gap-5xs: 8px;
+  --gap-8xs: 5px;
+  --gap-81xl: 100px;
+  --gap-13xl-9: 32.9px;
+  --gap-2xs-5: 10.5px;
+  --gap-3xl-4: 22.4px;
+  --gap-5xs-5: 7.5px;
+  --gap-mid-2: 17.2px;
+  --gap-4xs-2: 8.2px;
+  --gap-8xs-5: 4.5px;
+  --gap-mid-9: 17.9px;
+  --gap-10xs-2: 2.2px;
+  --gap-7xl-9: 26.9px;
+  --gap-7xs: 6px;
+  --gap-13xl-1: 32.1px;
+  --gap-9xs-7: 3.7px;
+
+  /* Paddings */
+  --padding-21xl: 40px;
+  --padding-176xl: 195px;
+  --padding-base: 16px;
+  --padding-xl: 20px;
+  --padding-31xl: 50px;
+  --padding-65xl: 84px;
+  --padding-61xl: 80px;
+  --padding-41xl: 60px;
+  --padding-3xs: 10px;
+  --padding-11xl: 30px;
+  --padding-6xl: 25px;
+  --padding-2xl: 21px;
+  --padding-5xl-7: 24.7px;
+  --padding-43xl-8: 62.8px;
+  --padding-5xl: 24px;
+  --padding-mini: 15px;
+  --padding-7xs: 6px;
+  --padding-base-4: 16.4px;
+  --padding-40xl-8: 59.8px;
+  --padding-4xs: 9px;
+  --padding-xs-2: 11.2px;
+  --padding-3xs-7: 9.7px;
+  --padding-xs: 12px;
+  --padding-85xl-7: 104.7px;
+  --padding-9xs-7: 3.7px;
+  --padding-10xs: 3px;
+  --padding-10xs-2: 2.2px;
+  --padding-8xs-5: 4.5px;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-101xl: 120px;
+  --br-81xl: 100px;
+  --br-10xs: 3px;
+  --br-4xl-2: 23.2px;
+  --br-5xs-5: 7.5px;
+  --br-xs: 12px;
+  --br-28xl-8: 47.8px;
+}
