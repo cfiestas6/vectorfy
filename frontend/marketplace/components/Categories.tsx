@@ -11,10 +11,10 @@ import {
 import CategoryCard from './CategoryCard'
 import NextLink from 'next/link'
 
-type Category = {
-    name: string,
-    imageURL: string
-}
+// type Category = {
+//     name: string,
+//     imageURL: string
+// }
 
 export const Categories = () => (
     <Box m='0'>
