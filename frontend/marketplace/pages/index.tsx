@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Hero from '../components/Hero' 
 import Categories from '../components/Categories'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 import { Box } from '@chakra-ui/react'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <Categories />
+      <Footer />
     </Box>
   )
 }
