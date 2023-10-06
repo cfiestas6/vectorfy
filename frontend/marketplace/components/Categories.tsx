@@ -18,16 +18,14 @@ type Category = {
 
 export const Categories = () => (
     <Box m='0'>
-        <Flex alignItems={"center"} justifyContent={"center"} flexDirection={"column"}>
+        <Heading fontSize={"2.2rem"} color={"brand.white.normal"} mx={"7.5rem"} mb={"5rem"} >
+            Browse Categories:
+        </Heading>
             <Flex mx='10%' mb='3rem' gap='7.5rem'>
                 <CategoryCard name="Machine Learning" imageURL='ml.png'  />
                 <CategoryCard name="LLMs & Embeddings" imageURL='llm.png'  />
-            </Flex>
-            <Flex mx='10%' mb='3rem' gap='7.5rem' >
-                <CategoryCard name="Chatbots" imageURL='chatbot.png'  />
                 <CategoryCard name="Image Generation" imageURL='owl.png'  />
             </Flex>     
-        </Flex>
     </ Box>
 )
 

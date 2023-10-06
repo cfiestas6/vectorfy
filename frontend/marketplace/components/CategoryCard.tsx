@@ -13,19 +13,7 @@ type Category = {
 
 export default function CategoryCard({name, imageURL}: Category): JSX.Element {
     return (
-        <Box bg='brand.blue.light' boxShadow='2xl' rounded='lg' flexBasis='50%'
-            _after={{
-                transition: 'all .3s ease',
-                content: '""',
-                w: 'full',
-                h: 'full',
-                pos: 'absolute',
-                top: 5,
-                left: 0,
-                backgroundImage: `url(${imageURL})`,
-                filter: 'blur(25px)',
-                zIndex: -1,
-              }}>
+        <Box bg='brand.blue.light' boxShadow={"#DAFFFB 5px 5px 30px 0px"} rounded='lg' flexBasis='50%'>
             <Box width={"100%"} m={"0"}>
                 <Image
                     m={"0"}

@@ -18,7 +18,7 @@ import {
   export default function CallToActionWithVideo() {
     const IMAGE = 'cover.png'
     return (
-      <Container minH='2xl' maxW={'7xl'} pt='1rem'>
+      <Container minH='2xl' maxW={'7xl'} pt='2rem'>
         <Stack
           align={'center'}
           spacing={{ base: 8, md: 8 }}
