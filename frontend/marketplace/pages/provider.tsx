@@ -17,7 +17,7 @@ export default function Home() {
       <Head>
         <title>Vectorfy</title>
         <meta name="description" content="Vectorfy" />
-        <link rel="icon" href="../logo-noname.png" />
+        <link rel="icon" href="../logo.png" />
       </Head>
       <Navbar/>
       <Footer />

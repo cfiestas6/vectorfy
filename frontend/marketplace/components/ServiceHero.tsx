@@ -22,9 +22,10 @@ import {
     Center,
   } from '@chakra-ui/react'
 
+import ServiceDescription from '@/components/ServiceDescription'
 import { useDisclosure } from '@chakra-ui/react'
   
-  export default function Service() {
+  export default function ServiceHero() {
     const IMAGE = 'geography-llm.png'
 	const { isOpen, onOpen, onClose } = useDisclosure()
     return (
@@ -114,7 +115,7 @@ import { useDisclosure } from '@chakra-ui/react'
             	</Text>
 			</Box>
 			<Box>
-				<Button onClick={onOpen} className='buy-button' mt='1rem' ml='0.5rem'>
+				<Button onClick={onOpen} className='main-button' mt='1rem' ml='0.5rem'>
 					Start
 				</Button>
 				<Modal isOpen={isOpen} onClose={onClose}>
@@ -129,17 +130,8 @@ import { useDisclosure } from '@chakra-ui/react'
       			</Modal>
 			</Box>
           </Stack>
-
-
         </Stack>
-		<Box py='2rem'>
-			<Heading color='brand.white.dark' size='3xl'>
-				Geography LLM
-			</Heading>
-			<Text color='brand.white.dark' pt='2rem' pb='10rem'>
-				LLM-Geo is an AI-powered geographic information system that leverages the general abilities of Large Language Models in natural language understanding, reasoning, and coding for addressing spatial problems with automatic spatial data collection, analysis, and visualization. It can help developers create custom applications that can solve complex spatial problems with minimal human intervention. LLM-Geo is built using the GPT-4 API in a Python environment, making it easy to integrate into existing Python-based GIS workflows.
-			</Text>
-		</Box>
+		<ServiceDescription/>
       </Container>
     )
   }
