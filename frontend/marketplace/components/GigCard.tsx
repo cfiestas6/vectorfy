@@ -15,12 +15,13 @@ type Gig = {
     user: string,
     price: number,
     imageURL: string,
+    url: string,
 }
 
-export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element{
+export default function GigCard({name, user, price, imageURL, url}: Gig): JSX.Element{
   return (
     <Center py={12}>
-      <Link href='#'>
+      <Link href={url}>
       <Box
         role={'group'}
         p={6}
@@ -71,7 +72,7 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
           </Heading>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
-              {price}$ / Month
+              {price}$
             </Text>
 
           </Stack>

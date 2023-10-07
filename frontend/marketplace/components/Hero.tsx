@@ -15,10 +15,10 @@ import {
     Center,
   } from '@chakra-ui/react'
   
-  export default function CallToActionWithVideo() {
+  export default function Hero() {
     const IMAGE = 'cover2.png'
     return (
-      <Container minH='2xl' maxW={'7xl'} pt='2rem'>
+      <Container minH='2xl' maxW={'7xl'}>
         <Stack
           align={'center'}
           spacing={{ base: 8, md: 8 }}
@@ -53,24 +53,11 @@ import {
                 Unlock access to powerful machine learning and artificial intelligence APIs. Save time and money by using other's hardware and AI models.
             </Text>
             <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                colorScheme={'red'}
-                bg={'brand.blue.mid'}
-                _hover={{ bg: 'brand.blue.midhover' }}>
-                Get started
-              </Button>
-              <Button
-                bg={'brand.blue.light'}
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                _hover={{ bg: 'brand.blue.lighthover' }}
-                leftIcon={<PlayIcon h={4} w={4} color={'brand.blue.mid'} />}>
+              <Button 
+                className='buy-button'
+                mt='1rem'
+                ml='10rem'
+                leftIcon={<PlayIcon h={4} w={4} color={'brand.white.normal'} />}>
                 How It Works
               </Button>
             </Stack>
@@ -116,8 +103,10 @@ import {
                   }}>
                   <Image
                     rounded={'xl'}
-                    height={345}
-                    width={423}
+                    mt={'5rem'}
+                    height={'25rem'}
+                    width={'25rem'}
+                    // padding='2rem'
                     objectFit={'cover'}
                     src={IMAGE}
                     alt="#"

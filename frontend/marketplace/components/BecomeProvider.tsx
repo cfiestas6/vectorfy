@@ -19,7 +19,7 @@ export default function BecomeProvider() {
         </Heading>
             <Flex mx='10%' mb='3rem' gap='7.5rem' color='brand.white.normal'>
                 <Flex px='2rem' flexDirection='column'>
-					<Image src="become-provider-1.png"/>
+					<Image src="become-provider-1.png" filter="drop-shadow(2.5px 2.5px 10px #9654e8)"/>
 					<Heading mb='0.5rem' textAlign='center' size='md'>
 						Sign Up
 					</Heading>
@@ -28,7 +28,7 @@ export default function BecomeProvider() {
 					</Text>
 				</ Flex>
                 <Flex px='2rem' flexDirection='column'>
-					<Image src="become-provider-2.png"/>
+					<Image src="become-provider-2.png" filter="drop-shadow(2.5px 2.5px 10px #9654e8)"/>
 					<Heading mb='0.5rem' textAlign='center' size='md'>
 						Offer a service
 					</Heading>
@@ -37,7 +37,7 @@ export default function BecomeProvider() {
 					</Text>
 				</ Flex>
                 <Flex px='2rem' flexDirection='column'>
-					<Image src="become-provider-3.png"/>
+					<Image src="become-provider-3.png" filter="drop-shadow(2.5px 2.5px 10px #9654e8)"/>
 					<Heading mb='0.5rem' textAlign='center' size='md'>
 						Start Earning
 					</Heading>
