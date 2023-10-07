@@ -21,7 +21,7 @@ export const Categories = () => (
         <Heading fontSize={"2.2rem"} color={"brand.white.normal"} mx={"7.5rem"} mb={"5rem"} >
             Browse Categories:
         </Heading>
-            <Flex mx='10%' mb='3rem' gap='7.5rem'>
+            <Flex mx='10%' mb='3rem' gap='7.5rem' justifyContent='center'>
                 <CategoryCard name="Machine Learning" imageURL='ml.png'  />
                 <CategoryCard name="LLMs & Embeddings" imageURL='llm.png'  />
                 <CategoryCard name="Image Generation" imageURL='owl.png'  />
