@@ -200,7 +200,7 @@ body {
   transform: rotatey(-80deg);
 }
 
-.buy-button {
+.main-button {
   font-size: 16px !important;
   padding: 1em 3.3em !important;
   transform: perspective(200px) rotateX(0deg) !important;
@@ -217,10 +217,10 @@ body {
   border-bottom: 2px solid #64CCC5 !important;
 }
 
-.buy-button:hover {
+.main-button:hover {
   transform: perspective(180px) rotateX(30deg) translateY(2px) !important;
 }
 
-.buy-button:active {
+.main-button:active {
   transform: perspective(170px) rotateX(36deg) translateY(5px) !important;
 }

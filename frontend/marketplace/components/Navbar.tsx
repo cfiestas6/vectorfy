@@ -44,7 +44,7 @@ import {
               fontFamily={'heading'}
               color="brand.white.normal"
               alignItems={'center'}>
-              <Image htmlWidth="60vh" src='logo-noname.png' />
+              <Image htmlWidth="60vh" src='logo.png' />
               <Text fontSize='xl'>
                 Vectorfy
               </Text>

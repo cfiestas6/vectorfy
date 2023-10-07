@@ -54,7 +54,7 @@ import {
             </Text>
             <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
               <Button 
-                className='buy-button'
+                className='main-button'
                 mt='1rem'
                 ml='10rem'
                 leftIcon={<PlayIcon h={4} w={4} color={'brand.white.normal'} />}>
@@ -106,7 +106,6 @@ import {
                     mt={'5rem'}
                     height={'25rem'}
                     width={'25rem'}
-                    // padding='2rem'
                     objectFit={'cover'}
                     src={IMAGE}
                     alt="#"

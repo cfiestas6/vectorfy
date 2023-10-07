@@ -14,9 +14,14 @@ import NextLink from 'next/link'
 export default function BecomeProvider() {
 	return (
 		<Box m='0' py={"2.5rem"} mb={"2.5rem"}>
-        <Heading fontSize={"2.2rem"} color={"brand.white.normal"} mx={"7.5rem"} mb={"3rem"} pt={"1rem"}>
-            Become a Provider:
-        </Heading>
+		<Flex maxW='7xl' justifyContent='space-between'>
+        	<Heading fontSize={"2.2rem"} color={"brand.white.normal"} mx={"7.5rem"} mb={"3rem"} pt={"1rem"}>
+        	    Become a Provider:
+        	</Heading>
+			<Button variant='outline' color='brand.blue.light' _hover={{color:'brand.blue.dark', background:'brand.blue.light'}}>
+        	    Start
+        	</Button>
+		</Flex>
             <Flex mx='10%' mb='3rem' gap='7.5rem' color='brand.white.normal'>
                 <Flex px='2rem' flexDirection='column'>
 					<Image src="become-provider-1.png" filter="drop-shadow(2.5px 2.5px 10px #9654e8)"/>
