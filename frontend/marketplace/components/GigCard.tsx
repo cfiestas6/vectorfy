@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Box,
   Center,
@@ -7,6 +5,7 @@ import {
   Heading,
   Text,
   Stack,
+  Link,
   Image,
 } from '@chakra-ui/react'
 
@@ -21,6 +20,7 @@ type Gig = {
 export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element{
   return (
     <Center py={12}>
+      <Link href='#'>
       <Box
         role={'group'}
         p={6}
@@ -44,13 +44,13 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: {imageURL},
+            backgroundImage: `url(${imageURL})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
           _groupHover={{
             _after: {
-              filter: 'blur(20px)',
+              filter: 'blur(35px)',
             },
           }}>
           <Image
@@ -71,12 +71,14 @@ export default function GigCard({name, user, price, imageURL}: Gig): JSX.Element
           </Heading>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
-              {price}$
+              {price}$ / Month
             </Text>
 
           </Stack>
         </Stack>
       </Box>
+      </ Link>
     </Center>
+   
   )
 }
