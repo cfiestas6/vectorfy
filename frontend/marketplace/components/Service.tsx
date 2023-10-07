@@ -12,11 +12,21 @@ import {
     createIcon,
     IconProps,
     useColorModeValue,
+	Modal,
+	ModalOverlay,
+	ModalContent,
+	ModalHeader,
+	ModalFooter,
+	ModalBody,
+	ModalCloseButton,
     Center,
   } from '@chakra-ui/react'
+
+import { useDisclosure } from '@chakra-ui/react'
   
   export default function Service() {
     const IMAGE = 'geography-llm.png'
+	const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
@@ -104,9 +114,19 @@ import {
             	</Text>
 			</Box>
 			<Box>
-				<Button className='buy-button' mt='1rem' ml='0.5rem'>
-					Buy!
+				<Button onClick={onOpen} className='buy-button' mt='1rem' ml='0.5rem'>
+					Start
 				</Button>
+				<Modal isOpen={isOpen} onClose={onClose}>
+        		<ModalOverlay />
+        		<ModalContent>
+          		<ModalHeader>Get Started with </ModalHeader>
+          		<ModalCloseButton />
+          		<ModalBody>
+					Hola
+          		</ModalBody>
+        		</ModalContent>
+      			</Modal>
 			</Box>
           </Stack>
 
@@ -121,6 +141,5 @@ import {
 			</Text>
 		</Box>
       </Container>
-
     )
   }
