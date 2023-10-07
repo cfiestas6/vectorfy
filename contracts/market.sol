@@ -58,7 +58,7 @@ contract vectorfy {
         Offer storage offer = offers[offerId];
         uint256 cost = amount * offer.pricePerCredit;
         require(msg.value >= cost, "Insufficient Ether sent");
-        
+        //check passing id non owned credits
         offer.escrowBalance += msg.value;
         CreditBalance storage balance = creditBalances[offerId][msg.sender];
         balance.offerId = offerId;

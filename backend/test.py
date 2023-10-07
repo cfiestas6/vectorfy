@@ -8,3 +8,5 @@ def auth_release(offer_id):
 def release_funds(offer_id):
     return(1)
 
+def authorize_release(offer_id):
+    return(1)
