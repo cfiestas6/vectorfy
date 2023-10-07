@@ -17,7 +17,7 @@ import NextLink from 'next/link'
 // }
 
 export const Categories = () => (
-    <Box m='0'>
+    <Box m='0' py={"2.5rem"}>
         <Heading fontSize={"2.2rem"} color={"brand.white.normal"} mx={"7.5rem"} mb={"5rem"} >
             Browse Categories:
         </Heading>
