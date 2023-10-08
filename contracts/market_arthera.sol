@@ -1,9 +1,13 @@
+import "./ISubscriptionOwner.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract vectorfy {
+contract vectorfy is ISubscriptionOwner, ERC165 {
 
-    address public backendAddress;
+    address public backendAddress = 0x8B68dAd33327bB12884F1D1F9084357817Fb5C36;
     
     struct Offer {
         address payable provider;
@@ -25,6 +29,7 @@ contract vectorfy {
     //index evetns
     event CreditsUsed(uint256 indexed offerId, address indexed user, uint256 creditAmount);
     event OfferCreated(uint256 indexed offerId, address indexed provider, string modelName, uint256 pricePerCredit);
+    event CreditsPurchased(uint256 indexed offerId, address indexed requester, uint256 amount);
     event FundsReleased(uint256 indexed offerId, uint256 amount);
     event AuthorizedRelease(uint256 indexed offerId);
     event FundsSlashed(uint256 indexed offerId, uint256 amount);
@@ -33,12 +38,12 @@ contract vectorfy {
         require(msg.sender == backendAddress, "Not authorized");
         _;
     }
-
-    constructor(address _backendAddress) {
-        require(_backendAddress != address(0), "Invalid backend address");
-        backendAddress = _backendAddress;
-    }
-
+//
+//    constructor(address _backendAddress) {
+//        require(_backendAddress != address(0), "Invalid backend address");
+//        backendAddress = _backendAddress;
+//    }
+//
     function createOffer(string memory modelName, uint256 pricePerCredit) public returns (uint256) {
         uint256 offerId = offers.length;
         offers.push(Offer({
@@ -105,5 +110,15 @@ contract vectorfy {
         offer.escrowBalance -= amount;
 
         emit FundsSlashed(offerId, amount);
+    }
+
+    function getSubscriptionOwner() external view returns (address) {
+        // the owner of the subscription must be an EOA
+        // Replace this with the account created in Step 1
+        return backendAddress;
+    }
+
+    function supportsInterface(bytes4 interfaceId) public view override(ERC165) returns (bool) {
+        return interfaceId == type(ISubscriptionOwner).interfaceId || super.supportsInterface(interfaceId);
     }
 }
