@@ -25,17 +25,19 @@ import {
 import ServiceDescription from '@/components/ServiceDescription'
 import { useDisclosure } from '@chakra-ui/react'
 import { InjectedConnector } from 'wagmi/connectors/injected' 
-import { prepareWriteContract, writeContract } from "@wagmi/core";
 import { 
 	useAccount,
+	usePrepareContractWrite,
 	useConnect,
 	useContractRead, 
 	useContractWrite,
-	useDisconnect 
+	useDisconnect, 
+	useWaitForTransaction
 } from "wagmi";
 import { CONTRACT_ADDRESS as contractAddress } from '../utils/constants';
 import abi from '../utils/abi.json';
 import { Abi } from 'viem';
+import CallUseCredits from './CallUseCredits';
   
   export default function ServiceHero() {
     const IMAGE = 'geography-llm.png'
@@ -44,18 +46,6 @@ import { Abi } from 'viem';
     const { connect } = useConnect({
       connector: new InjectedConnector(),
     })
-	async function handleBuyCredits() {
-		// -------------------------------
-		// LLamar a buyCredits y a useCredits
-		// -------------------------------
-		const a = useContractWrite({
-			address: address,
-			abi: abi as unknown as Abi,
-			functionName: 'releaseCredits',
-			args: [],
-		});
-	}
-    return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
 			pt='5rem'
@@ -151,9 +141,10 @@ import { Abi } from 'viem';
           		<ModalHeader>Get Started with </ModalHeader>
           		<ModalCloseButton />
           		<ModalBody>
-					<Button onClick={handleBuyCredits}  mt='1rem' ml='0.5rem'>
+					<Button disabled={!isLoading} onClick={write} mt='1rem' ml='0.5rem'>
 						Buy Credits
 					</Button>
+					<CallUseCredits/>
           		</ModalBody>
         		</ModalContent>
       			</Modal>
