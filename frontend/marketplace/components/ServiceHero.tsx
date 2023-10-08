@@ -44,18 +44,20 @@ import { Abi } from 'viem';
     const { connect } = useConnect({
       connector: new InjectedConnector(),
     })
-	async function handleBuyCredits() {
-		// -------------------------------
-		// LLamar a buyCredits y a useCredits
-		// -------------------------------
-		const a = useContractWrite({
-			address: address,
-			abi: abi as unknown as Abi,
-			functionName: 'releaseCredits',
-			args: [],
-		});
-	}
-    return (
+    const contractWrite = useContractWrite({
+        address: address,
+        abi: abi as unknown as Abi,
+        functionName: 'releaseCredits',
+        args: [],
+    });
+    
+    async function handleBuyCredits() {
+        // -------------------------------
+        // Call buyCredits and useCredits
+        // -------------------------------
+        const a = await contractWrite();
+    }
+	return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
 			pt='5rem'
