@@ -46,20 +46,6 @@ import CallUseCredits from './CallUseCredits';
     const { connect } = useConnect({
       connector: new InjectedConnector(),
     })
-
-	const { config, error } = usePrepareContractWrite({
-		address: contractAddress,
-		abi: abi as unknown as Abi,
-		functionName: 'purchaseCredits',
-		args: ["0", "1"],
-		value: BigInt(1)
-	})
-	const { data, write } = useContractWrite(config)
-	const { isLoading, isSuccess } = useWaitForTransaction({
-		hash: data?.hash,
-	})
-
-    return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
 			pt='5rem'
