@@ -25,9 +25,9 @@ import {
 import ServiceDescription from '@/components/ServiceDescription'
 import { useDisclosure } from '@chakra-ui/react'
 import { InjectedConnector } from 'wagmi/connectors/injected' 
-import { prepareWriteContract, writeContract } from "@wagmi/core";
 import { 
 	useAccount,
+	usePrepareContractWrite,
 	useConnect,
 	useContractRead, 
 	useContractWrite,
@@ -44,17 +44,13 @@ import { Abi } from 'viem';
     const { connect } = useConnect({
       connector: new InjectedConnector(),
     })
-	async function handleBuyCredits() {
-		// -------------------------------
-		// LLamar a buyCredits y a useCredits
-		// -------------------------------
-		const a = useContractWrite({
-			address: address,
-			abi: abi as unknown as Abi,
-			functionName: 'releaseCredits',
-			args: [],
-		});
-	}
+
+	const { config, error } = usePrepareContractWrite({
+		address: contractAddress,
+		abi: abi as unknown as Abi,
+		functionName: 'buyCredits',
+	})
+		  const { write } = useContractWrite(config)
     return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
@@ -151,7 +147,7 @@ import { Abi } from 'viem';
           		<ModalHeader>Get Started with </ModalHeader>
           		<ModalCloseButton />
           		<ModalBody>
-					<Button onClick={handleBuyCredits}  mt='1rem' ml='0.5rem'>
+					<Button  mt='1rem' ml='0.5rem'>
 						Buy Credits
 					</Button>
           		</ModalBody>
