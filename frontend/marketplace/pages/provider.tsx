@@ -9,6 +9,7 @@ import BecomeProvider from '@/components/BecomeProvider'
 
 import { Box } from '@chakra-ui/react'
 import Gigs from '@/components/Gigs'
+import Provider from '@/components/Provider'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="../logo.png" />
       </Head>
       <Navbar/>
+      <Provider/>
       <Footer />
     </Box>
   )

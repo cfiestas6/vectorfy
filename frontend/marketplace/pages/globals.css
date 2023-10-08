@@ -224,3 +224,77 @@ body {
 .main-button:active {
   transform: perspective(170px) rotateX(36deg) translateY(5px) !important;
 }
+
+.provider--body {
+  padding: 0 0;
+  margin: 0;
+  height: 50rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #001C30;
+  color: whitesmoke;
+}
+
+
+.App {
+  background: #DAFFFB;
+  color: #001C30;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Box {
+  padding: 1rem 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.data--name {
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.data--value {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.inputs-block {
+  padding: 5rem 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.provider--heading {
+  font-size: 3rem;
+  font-family: 'Space Mono', sans-serif;
+}
+
+.inputs{
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin: 1rem 0rem;
+  color: whitesmoke;
+  text-align: center;
+  border: 2px solid #DAFFFB;
+  border-radius: 10px;
+  padding: 1rem 8rem;
+  background: transparent;
+  max-width: 190px;
+ }
+ 
+ .input:active {
+  box-shadow: 2px 2px 15px #DAFFFB inset;
+ }
+ 
+ .input::placeholder {
+   color: rgb(202, 201, 201);
+ }

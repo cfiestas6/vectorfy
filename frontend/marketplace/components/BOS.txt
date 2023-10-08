@@ -11,6 +11,7 @@ const Container = styled.div`
 
 const Stats = styled.div`
     background: #DAFFFB;
+    padding: 1.5rem;
     color: #001C30;
     width: 100%;
     display: flex;
@@ -25,7 +26,7 @@ const Box = styled.div`
 
 const DataName = styled.div`
     font-size: 15px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 `;
 
 const DataValue = styled.div`
@@ -35,7 +36,7 @@ const DataValue = styled.div`
 `;
 
 const InputsBlock = styled.div`
-    padding: 5rem 12.5rem;
+    padding: 5rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +45,7 @@ const InputsBlock = styled.div`
 
 const InputsBlockText = styled.div`
     font-size: 3rem;
+    font-weight: 600;
     font-family: 'Space Mono', sans-serif;
 `;
 
@@ -54,6 +56,7 @@ const Inputs = styled.div`
 `;
 
 const Input = styled.div`
+    padding: 0rem 5rem;
     margin: 1rem 0rem;
 `;
 
@@ -88,27 +91,27 @@ return (
   <Container>
     <Stats>
       <Box>
-        <DataName>Name</DataName>
+        <DataName>Name:</DataName>
         <DataValue>999</DataValue>
       </Box>
       <Box>
-        <DataName>Name</DataName>
+        <DataName>Name:</DataName>
         <DataValue>999</DataValue>
       </Box>
       <Box>
-        <DataName>Name</DataName>
+        <DataName>Name:</DataName>
         <DataValue>999</DataValue>
       </Box>
     </Stats>
     <InputsBlock>
-      <InputsBlockText>
-        <h1>Add Gig</h1>
-      </InputsBlockText>
+      <InputsBlockText>Add Gig</InputsBlockText>
       <Inputs>
         <Input>
+          <DataName>Name:</DataName>
           <input></input>
         </Input>
         <Input>
+          <DataName>Name:</DataName>
           <input></input>
         </Input>
       </Inputs>
