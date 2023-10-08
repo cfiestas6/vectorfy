@@ -39,13 +39,27 @@ import abi from '../utils/abi.json';
 import { Abi } from 'viem';
 import CallUseCredits from './CallUseCredits';
   
-  export default function ServiceHero() {
+export default function ServiceHero() {
     const IMAGE = 'geography-llm.png'
 	const { isOpen, onOpen, onClose } = useDisclosure()
     const { address, isConnected } = useAccount()
     const { connect } = useConnect({
       connector: new InjectedConnector(),
     })
+ 
+ 	const { config, error } = usePrepareContractWrite({
+		address: contractAddress,
+		abi: abi as unknown as Abi,
+		functionName: 'purchaseCredits',
+		args: ["0", "1"],
+		value: BigInt(1)
+	})
+
+	const { data, write } = useContractWrite(config)
+    const { isLoading, isSuccess } = useWaitForTransaction({
+        hash: data?.hash,
+    })
+	return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
 			pt='5rem'
