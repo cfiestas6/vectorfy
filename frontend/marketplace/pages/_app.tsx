@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { theme as chakraTheme } from '@chakra-ui/react';
 import NextLink from 'next/link'
+import { WagmiConfig } from 'wagmi';
+import config from '../utils/wagmiConfig';
 
 const colors = {
   ...chakraTheme.colors,
@@ -54,8 +56,10 @@ const customTheme = extendTheme({ fonts, components, colors });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    <WagmiConfig config={config}>
     <ChakraProvider theme={customTheme}>
       <Component {...pageProps} />
     </ChakraProvider>
+    </WagmiConfig >
     )
 }
