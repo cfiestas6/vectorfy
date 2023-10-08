@@ -17,14 +17,19 @@ import {
 
 import Stats from './Stats'
 import Inputs from './Inputs'
+import Withdraw from './Withdraw'
 
 export default function Provider () {
 	return (
-		<>
-			<Container className="provider--body">
-				<Stats/>
-				<Inputs />
-			</Container>
-		</>
+      <Box 
+        color='whitesmoke'
+        display='flex'
+        justifyContent='center'
+        alignItems='space-between'
+        margin='8rem 0rem'
+      >
+			  <Inputs />
+			  <Withdraw />
+      </Box>
 	)
 }

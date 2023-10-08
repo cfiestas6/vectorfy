@@ -5,9 +5,9 @@ import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract vectorfy is ISubscriptionOwner, ERC165 {
+contract vectorfyAr is ISubscriptionOwner, ERC165 {
 
-    address public backendAddress = 0x8B68dAd33327bB12884F1D1F9084357817Fb5C36;
+    address public backendAddress;
     
     struct Offer {
         address payable provider;
@@ -38,12 +38,12 @@ contract vectorfy is ISubscriptionOwner, ERC165 {
         require(msg.sender == backendAddress, "Not authorized");
         _;
     }
-//
-//    constructor(address _backendAddress) {
-//        require(_backendAddress != address(0), "Invalid backend address");
-//        backendAddress = _backendAddress;
-//    }
-//
+
+    constructor(address _backendAddress) {
+        require(_backendAddress != address(0), "Invalid backend address");
+        backendAddress = _backendAddress;
+    }
+
     function createOffer(string memory modelName, uint256 pricePerCredit) public returns (uint256) {
         uint256 offerId = offers.length;
         offers.push(Offer({
