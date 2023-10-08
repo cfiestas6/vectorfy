@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
 import Hero from '../components/Hero' 
 import Categories from '../components/Categories'
 import Navbar from '@/components/Navbar'
@@ -17,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Vectorfy</title>
         <meta name="description" content="Vectorfy" />
-        <link rel="icon" href="/logo-noname.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Navbar/>
       <Hero/>

@@ -7,7 +7,6 @@ import {
     Button,
     Center,
 } from '@chakra-ui/react' 
-// import Link from 'next/link'
 
 type Category = {
     name: string,

@@ -27,7 +27,7 @@ const Logo = (props: any) => {
     // </svg>
     <Box>
       <Flex alignItems={"center"}>
-        <Image src='logo-noname.png' w="3rem"/>
+        <Image src='logo-background.png' w="3rem"/>
         <Heading size="md">
           Vectorfy
         </Heading>
