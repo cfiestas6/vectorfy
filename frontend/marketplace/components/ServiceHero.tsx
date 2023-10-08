@@ -49,8 +49,10 @@ import { Abi } from 'viem';
 		address: contractAddress,
 		abi: abi as unknown as Abi,
 		functionName: 'buyCredits',
+		args: ["0", "1"],
+		value: BigInt(1)
 	})
-		  const { write } = useContractWrite(config)
+	const { write } = useContractWrite(config)
     return (
       <Container minH='2xl' maxW={'4xl'} pt='2rem'>
         <Stack
@@ -147,7 +149,7 @@ import { Abi } from 'viem';
           		<ModalHeader>Get Started with </ModalHeader>
           		<ModalCloseButton />
           		<ModalBody>
-					<Button  mt='1rem' ml='0.5rem'>
+					<Button onClick={() => (write)} mt='1rem' ml='0.5rem'>
 						Buy Credits
 					</Button>
           		</ModalBody>
