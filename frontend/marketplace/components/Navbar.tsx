@@ -6,6 +6,7 @@ import {
     Button,
     Stack,
     Collapse,
+    Heading,
     Image,
     Icon,
     Popover,
@@ -15,11 +16,24 @@ import {
     useBreakpointValue,
     useDisclosure,
   } from '@chakra-ui/react'
-  
-  
+  import { useAccount, useConnect, useDisconnect } from 'wagmi'
+  import { InjectedConnector } from 'wagmi/connectors/injected' 
+  import { prepareWriteContract, writeContract } from "@wagmi/core";
+
   export default function Navbar() {
-    const { isOpen, onToggle } = useDisclosure()
-  
+    const { address, isConnected } = useAccount()
+    const { connect } = useConnect({
+      connector: new InjectedConnector(),
+    })
+    const { disconnect } = useDisconnect()
+
+    function handleClick() {
+      if (!isConnected) {
+        connect()
+      } else {
+        disconnect()
+      }
+    }
     return (
       <Box>
         <Flex
@@ -59,14 +73,16 @@ import {
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
+            alignItems={'center'}
             spacing={6}>
-            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'} color="brand.white.normal">
-              Sign In
-            </Button>
+            <Heading fontSize={'sm'} fontWeight={400} color="brand.white.normal">
+              {isConnected ? (address && address.slice(0, 5) + "..." + address.slice(35, -1)) : ''}
+            </Heading>
             <Button
               as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
+              onClick={handleClick}
               fontWeight={600}
               color="brand.blue.dark"
               bg="brand.blue.light"
@@ -74,12 +90,12 @@ import {
               _hover={{
                 bg: "brand.blue.lighthover",
               }}>
-              Sign Up
+              {isConnected ? 'Disconnect' : 'Connect'}
             </Button>
           </Stack>
         </Flex>
   
-        <Collapse in={isOpen} animateOpacity>
+        <Collapse animateOpacity>
           <MobileNav />
         </Collapse>
       </Box>
