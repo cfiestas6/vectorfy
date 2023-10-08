@@ -8,8 +8,10 @@ import ServiceHero from '@/components/ServiceHero'
 
 import { Box } from '@chakra-ui/react'
 import Gigs from '@/components/Gigs'
+import { useAccount, useConnect, useDisconnect } from 'wagmi'
 
 export default function Home() {
+  const {isConnected} = useAccount()
   return (
     <Box m='0' bg='brand.blue.dark'>
       <Head>
@@ -18,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="../logo.png" />
       </Head>
       <Navbar/>
-      <ServiceHero />
+        <ServiceHero />
       <Footer />
     </Box>
   )
